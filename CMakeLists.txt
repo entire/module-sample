@@ -5,8 +5,13 @@ add_library(sample)
 target_compile_options(sample PRIVATE -Wall -Wextra)
 set_target_properties(sample PROPERTIES C_STANDARD 11)
 
-target_include_directories(sample PUBLIC include)
-add_subdirectory(src)
+target_include_directories(sample PUBLIC 
+  include
+  src
+)
+target_sources(sample PRIVATE
+  src/plain.c
+)
 
 file(CONFIGURE OUTPUT .gitignore
   NEWLINE_STYLE UNIX
