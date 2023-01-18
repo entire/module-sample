@@ -1,0 +1,1 @@
+#define HELLO_FROM_SAMPLE_2 "Hello from sample 2"

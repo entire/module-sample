@@ -1,6 +1,10 @@
 if(CONFIG_LIBSAMPLE)
   add_subdirectory(.. build)
   set_property(GLOBAL APPEND PROPERTY ZEPHYR_INTERFACE_LIBS sample)
-  #zephyr_include_directories(../include)
-  #zephyr_interface_library_named(sample)
+  zephyr_include_directories(
+    # ../sample1
+    # ../sample2
+    ..
+  )
+  # zephyr_interface_library_named(sample)
 endif()

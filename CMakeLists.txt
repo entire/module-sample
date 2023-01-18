@@ -6,11 +6,12 @@ target_compile_options(sample PRIVATE -Wall -Wextra)
 set_target_properties(sample PROPERTIES C_STANDARD 11)
 
 target_include_directories(sample PUBLIC 
-  include
-  src
+  # sample1
+  # sample2
+  .
 )
 target_sources(sample PRIVATE
-  src/plain.c
+  sample1/src/plain.c
 )
 
 file(CONFIGURE OUTPUT .gitignore
